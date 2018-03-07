@@ -4,12 +4,12 @@
   var spe=document.getElementById('spe');
   var length = document.getElementById('length');
   var area=document.getElementById('area');
-  spe.onclick=function(){
-    length.value=2*width.value+2*height.value;
-    area.value=width.value*height.value;
-  }
   var reg=/^[0-9]*$/;
   
+  spe.onclick=function(){
+   length.value=2*width.value+2*height.value;
+    area.value=width.value*height.value;
+  }
   width.onblur=function(){
     if(width.value==''){
       height.setAttribute('disabled',true);
