@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>进度条</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+    <style>
+    *{
+    	text-align: center;
+    	margin: 0 auto;
+    }
+	button{
+        width: 60px;
+        height: 40px;
+        font-size: 15px;
+        background-color: pink;
+        border-radius:5px;
+        border: 1px solid pink;
+        color: rgb(255,255,255);
+      }
+    </style>
+  </head>
+  <body > 
+		<div class="container"> 
+		 <p></p>
+		 <div class="progress ">
+		  <div id='bar' class="progress-bar progress-bar-success"  style="background-color:pink;">
+		    <span class="sr-only">10% Complete (danger)</span>
+		  </div>
+		 </div>
+		 <button id="start">开始</button>
+		 <button id='stop'>暂停</button>
+		 <button id="restart">重置</button>
+		</div>
+<script src="js/jquery.js"></script>    
+<script src="js/bootstrap.min.js"></script>   
+</body>
+<script>
+	var num=0;
+	var color;
+	var bar = document.getElementById('bar');
+	var start = document.getElementById('start');
+	var stop = document.getElementById('stop');
+	var restart = document.getElementById('restart');
+	start.onclick=function(){
+		color= setInterval(function(){
+			num++;
+			bar.style.width=num+'%';
+			if(num == 100){
+				clearInterval(color);
+			}
+		},100);
+	}
+	stop.onclick=function(){
+		clearInterval(color);
+	}
+	restart.onclick=function(){
+		clearInterval(color);
+		bar.style.width='0%';
+	}
+</script>
+</html>

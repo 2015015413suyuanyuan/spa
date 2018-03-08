@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义按钮</title>
+     <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+     <style>
+    *{
+          text-align: center;
+          margin: 0 auto;
+      }
+        
+      #content{
+          margin-top: 40px;
+          font-size: 16px;
+          width: 260px;
+          height: 300px;
+          text-align: left;
+          color: purple;
+      }
+      button{
+        width: 110px;
+        height: 50px;
+        font-size: 17px;
+        background-color: pink;
+        border-radius:5px;
+        border: 1px solid pink;
+        color: rgb(255,255,255);
+      }
+     </style>
+</head>
+<body>
+<div id='content'>
+  <button id="btn">我是按钮</button>
+</div>
+</body>
+<script>
+  var btn= document.getElementById('btn');
+  btn.onclick=function(){
+    alert('哎呀，一不小心被你点了。');
+  }
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rang标签</title>
+     <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+     <style>
+	*{
+        text-align: center;
+        margin: 0 auto;
+    }
+      
+    #content{
+        margin-top: 40px;
+        font-size: 16px;
+        width: 260px;
+        height: 300px;
+        text-align: left;
+        color: purple;
+    }
+    p{
+    	margin-top: 20px;
+		text-align: left;
+    }
+    #val{
+		width: 200px;
+		
+    }
+    #age{
+		font-weight:bold;
+		font-size: 20px;
+    }
+     </style>
+
+</head>
+<body>
+
+<div id='content'>
+	年龄：<input type="range" min='0' max='100' value="0" id='val'>
+	<br>
+	<p>您的年龄是：<span id='age' >0&nbsp;</span>岁</p>
+</div>
+</body>
+<script>
+	var val = document.getElementById('val');
+	var age = document.getElementById('age');
+	console.log(val.value);
+	val.onmouseup=function(){
+		age.innerHTML=val.value+' ';
+		console.log(val.value);	
+	}
+</script>
+
+</html>
