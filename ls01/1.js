@@ -1,11 +1,17 @@
   var width=document.getElementById('width');
   var height=document.getElementById('height');
-  var txt = document.getElementById('txt');
+  var txt1 = document.getElementById('txt1');
+   var txt2 = document.getElementById('txt2');
   var spe=document.getElementById('spe');
   var length = document.getElementById('length');
   var area=document.getElementById('area');
-  var reg=/^[0-9]*$/;
+  var reg=/^\d+(\.\d+)?$/;
   
+  window.onload=function(){
+    var width=document.getElementById('width');
+    width.focus();
+  }
+
   spe.onclick=function(){
    length.value=2*width.value+2*height.value;
     area.value=width.value*height.value;
@@ -13,35 +19,35 @@
   width.onblur=function(){
     if(width.value==''){
       height.setAttribute('disabled',true);
-      txt.style.display = "block";
-      txt.innerHTML='宽度值不能为空！';
+      txt1.style.display = "block";
+      txt1.innerHTML='宽度值不能为空！';
     }
     else if(!reg.test(width.value)){
       height.setAttribute('disabled',true);
-      txt.style.display = "block";
-      txt.innerHTML='宽度值必须为数值！';
+      txt1.style.display = "block";
+      txt1.innerHTML='宽度值必须为数值！';
     }
     else{
       height.removeAttribute('disabled');
-      txt.style.display = "none";
-      txt.innerHTML='';
+      txt1.style.display = "none";
+      txt1.innerHTML='';
 
     }
   }
   height.onblur=function(){
     if(height.value==''){
       width.setAttribute('disabled',true);
-      txt.style.display = "block";
-      txt.innerHTML='高度值不能为空！';
+      txt2.style.display = "block";
+      txt2.innerHTML='高度值不能为空！';
     }
     else if(!reg.test(height.value)){
       width.setAttribute('disabled',true);
-      txt.style.display = "block";
-      txt.innerHTML='高度值必须为数值！';
+      txt2.style.display = "block";
+      txt2.innerHTML='高度值必须为数值！';
     }
     else{
       width.removeAttribute('disabled');
-      txt.style.display = "none";
-      txt.innerHTML='';
+      txt2.style.display = "none";
+      txt2.innerHTML='';
     }    
   }
