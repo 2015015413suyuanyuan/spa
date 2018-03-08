@@ -1,0 +1,77 @@
+SPA富应用开发
+第一章
+课程流程：
+1.SPA介绍
+2.安装开发环境
+3.做一个简单的APP
+
+1.1 SPA富应用开发（spa：single page application）
+spa富应用开发
+SPA 单页面的应用程序
+富应用？RIA：rich internet application 交互的
+将webAPP做成和Windows应用一样 响应速度 细致 交互很快 的应用 叫 富应用
+
+例子：
+
+1.在线脑图 Visio naotu.baidu.com  processon.com  gmail.com
+html  超文本标记语言：做信息共享 做页面 现在可以统一接口 跨平台等等
+2.audio video 对视频 音频的支持，浏览器原生支持
+3.像素级的图像处理，例如：在线版的Photoshop
+
+在网络上完成，不需要下载更新占内存等，有很多优势
+
+
+用记事本举例子：
+
+ 
+页面：前段 UI：GUI（graphic user interface 图形用户界面）WUI（web应用程序的用户界面） CLIS （用户界面、接口、交界面：user   interface）
+
+界面要素：
+
+menubar
+系统菜单
+ 
+上下文菜单
+ 
+级联菜单（可能还有下一级菜单）
+
+statusbar
+dialog box对话框：无模态对话框：不影响主窗体做操作  模态对话框：不关闭主窗口无法操作
+
+窗口小控件：widget
+
+
+自顶向下分解：窗口（window）
+ 
+
+MVC：model view controller
+ 
+对话框就是controller
+
+一、简介 一次
+二、UI(7次课)
+1.H5内置控件的用法 1次
+2.数据合法性校验 1次
+3.第三方组件 1次
+4.自定义UI组件 2/3次 重点
+5.spa   1次
+6.MVC  1次  不用框架 自己搭架构
+三、data storage    1次
+四、文本、图像  1次
+	音频、视频   1次
+五、自动化构建 grunt
+
+>上下级关系 +平级关系
+div.rectangle>label+input.-width[type=’textbox’]+ label+input.-height[type=’textbox’]+
+label+input.-width[type=’textbox’]+
+label+input.-calc[type=’button’]+
+label+input.-[type=’textbox’]|bem
+
+
+BEM：css 的命名规范 目的：让css的命名不冲突 
+block element modify
+Ctrl Y /注释
+div外面加div  Ctrl y   例如放form里面  输入form 加回车
+alias: lrd live reload热加载
+
+：lclose  关闭注释
