@@ -19,6 +19,9 @@
         border: 1px solid pink;
         color: rgb(255,255,255);
       }
+      .progress-bar{
+      	box-shadow:0;
+      }
     </style>
   </head>
   <body > 
@@ -44,6 +47,7 @@
 	var stop = document.getElementById('stop');
 	var restart = document.getElementById('restart');
 	start.onclick=function(){
+		start.setAttribute('disabled','disabled');
 		color= setInterval(function(){
 			num++;
 			bar.style.width=num+'%';
@@ -53,11 +57,14 @@
 		},100);
 	}
 	stop.onclick=function(){
+		start.removeAttribute('disabled');
 		clearInterval(color);
 	}
 	restart.onclick=function(){
 		clearInterval(color);
 		bar.style.width='0%';
+		num=0;
+		start.removeAttribute('disabled');
 	}
 </script>
 </html>
