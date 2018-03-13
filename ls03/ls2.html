@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算矩形的周长和面积</title>
+     <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+     <style>
+      *{
+        text-align: center;
+        margin: 0 auto;
+      }
+      #content{
+        margin-top: 40px;
+        font-size: 22px;
+        width: 260px;
+        height: 300px;
+        text-align: left;
+        color: purple;
+      }
+      input{
+        text-align: left;
+      }
+      #length,#area{
+        background-color: rgb(235,235,228);
+        border: 1px solid rgb(169,169,169);                    
+      }
+      #spe{
+          margin-right: 180px;          
+      }
+      .s1{
+        border:0;
+        text-align:center;
+        color:red; 
+        font-size:20px;
+      }
+      #txt1,#txt2{
+        display: none;
+        margin-right:-30px;
+        color: red;
+        font-size: 16px;
+      }
+
+     </style>
+</head>
+<body>
+
+<div id='content'>
+   <label for="">宽度:</label>
+  <input id="width" type="textbox">
+  <span class='s1'>*</span>
+  <span id='txt1'>宽度不能为空</span>
+  
+  <label for="">高度:</label>
+  <input id="height" type="textbox">
+  <span class='s1'>*</span>
+  <br>
+  <span id='txt2'>高度不能为空</span>
+  <button id="spe">计算</button>
+  <br>
+  <label for="">周长:</label>
+  <input id="length" type="textbox" disabled="disabled">
+  <br>
+  <label for="">面积:</label>
+  <input id="area" type="textbox" disabled="disabled">
+</div>
+</body>
+<script src="js/2.js"></script>
+</html>

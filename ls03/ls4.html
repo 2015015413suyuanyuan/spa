@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算矩形的周长和面积</title>
+     <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+     <style>
+      *{
+        text-align: center;
+        margin: 0 auto;
+      }
+      #content{
+        margin-top: 40px;
+        font-size: 22px;
+        width: 260px;
+        height: 300px;
+        text-align: left;
+        color: purple;
+      }
+      input{
+        text-align: left;
+      }
+      #length,#area{
+        background-color: rgb(235,235,228);
+        border: 1px solid rgb(169,169,169);                    
+      }
+      #spe{
+          margin-right: 180px;          
+      }
+      span{
+        red;
+      }
+      #txt1,#txt2{
+        display: none;
+        margin-right:-30px;
+        color: red;
+        font-size: 16px;
+      }
+      input:valid+span:after {
+        content: '√';
+        color: green;
+      }
+      input:invalid+span:after {
+        content: '×';
+        color: red;
+      }
+      #f1{
+        text-align: left;
+      }
+      #rectangle-width-validate,
+#rectangle-height-validate {
+  color: red;
+  margin-left: 63px;
+  font-size: 0.8em;
+}
+
+
+     </style>
+</head>
+<body>
+
+<div id='content'>
+<form id='f1'>
+  <label for="">宽度:</label>
+  <input id="width" type="number" mim='0' autofocus required step='0.00001'>
+  <span></span>
+  <br>
+   <div id="rectangle-width-validate"></div>
+  
+  <label for="">高度:</label>
+  <input id="height" type="number" min='0' autofocus required step='0.00001'>
+  <span></span>
+  <br>
+  <div id="rectangle-width-validate"></div>
+  <input type='button' id="spe" value="计算">
+  <br>
+  <label for="">周长:</label>
+  <input id="length" type="textbox" disabled="disabled">
+  <br>
+  <label for="">面积:</label>
+  <input id="area" type="textbox" disabled="disabled">
+</form>
+
+</div>
+</body>
+<script src="js/4.js"></script>
+</html>
