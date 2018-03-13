@@ -1,43 +1,53 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>自定义按钮</title>
-     <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
-     <style>
+<!DOCTYPE>
+<html>
+  <head>
+    <title>进度条</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+    <style>
     *{
-          text-align: center;
-          margin: 0 auto;
-      }
-        
-      #content{
-          margin-top: 40px;
-          font-size: 16px;
-          width: 260px;
-          height: 300px;
-          text-align: left;
-          color: purple;
-      }
-      button{
-        width: 110px;
-        height: 50px;
-        font-size: 17px;
-        background-color: pink;
-        border-radius:5px;
-        border: 1px solid pink;
-        color: rgb(255,255,255);
-      }
-     </style>
-</head>
-<body>
-<div id='content'>
-  <button id="btn">我是按钮</button>
+    	text-align: center;
+    	margin: 0 auto;
+    }
+	img{
+		width: 20px;
+		position: fixed;
+		right: 555px;
+		top: 55px;
+	}
+	
+	#dis{
+		position: fixed;
+		top:50px;
+		right: 576px;
+		display: none;
+	}
+    </style>
+  </head>
+<body > 
+<div style="margin-top:50;">
+ <label for="name">密码 :</label>
+ <input type="password" style="text-align:left;" id="pwd">
+ <img src="1.jpg" alt="" id="img1">
+ <input type="text" id="dis"  style="text-align:left;">
 </div>
+
 </body>
+
 <script>
-  var btn= document.getElementById('btn');
-  btn.onclick=function(){
-    alert('哎呀，一不小心被你点了。');
-  }
+var val=document.getElementById('pwd');
+var val1=document.getElementById('dis');
+var img1=document.getElementById('img1');
+
+img1.onmouseover=function(){
+		img1.src='2.jpg';
+		val1.style.display='inline-block';
+		val1.value=val.value;
+}
+img1.onmouseout=function(){
+	    img1.src='1.jpg';
+	    val1.style.display='none';
+}
 </script>
 </html>

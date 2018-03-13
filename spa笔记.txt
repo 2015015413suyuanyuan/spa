@@ -1,0 +1,20 @@
+1、段错误
+segmentfault
+JS的浮点舍入  浮点运算
+2.最后两个文本框不能编辑
+3、刷新自动聚焦
+4.tab键顺序
+
+
+can get/  目录或者URL地址错误 如 网页是否是index.html
+
+
+参考资料
+1、MDN
+2、segmentfault
+
+
+占用的端口如何把其中一个程序杀掉？
+答：ps aux |grep 8080
+干掉前一个进程号
+
