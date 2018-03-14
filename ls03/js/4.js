@@ -1,18 +1,19 @@
-  var width=document.getElementById('width');
-  var height=document.getElementById('height');
-  var txt1 = document.getElementById('txt1');
-   var txt2 = document.getElementById('txt2');
-  var spe=document.getElementById('spe');
-  var length = document.getElementById('length');
-  var area=document.getElementById('area');
-  var reg=/^\d+(\.\d+)?$/;
+  var width=document.getElementById('rectangle-width');
+  var height=document.getElementById('rectangle-height');
+
+  var spe=document.getElementById('rectangle-calc');
+  var length = document.getElementById('rectangle-perimeter');
+  var area=document.getElementById('rectangle-area');
+
   
   window.onload=function(){
-    var width=document.getElementById('width');
+    var width=document.getElementById('rectangle-width');
     width.focus();
   }
 
   spe.onclick=function(){
+
+   
     var val1=width.value;
     var val2=height.value;
     var widLength;
@@ -27,29 +28,5 @@
     area.value=(val1*(10**max))*(val2*(10**max))/(10**(2*max))
   }
 
- //  width.addEventListener('input',function(event){
- //    if(!width.validity.valid){
- //      txt2.style.display = "block";
- //      txt2.innerHTML='宽度值必须为数值！';
- //    }
- //    else{
- //      height.removeAttribute('disabled');
- //      txt1.style.display = "none";
- //      txt1.innerHTML='';
-
- //    }
- //  });
-
- //  height.addEventListener('input',function(event){
- //    if(!height.validity.valid){
-      
- //    }
- //    else{
- //      height.removeAttribute('disabled');
- //      txt1.style.display = "none";
- //      txt1.innerHTML='';
-
- //    }
- //  }); 
-
- // 
+  $('.rectangle form').submit(function(e) {
+    e.preventDefault(); });

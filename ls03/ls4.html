@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <title>计算矩形的周长和面积</title>
      <meat name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum  scale=1.0"/>
+     <script src='js/jquery.js'></script>
      <style>
       *{
         text-align: center;
         margin: 0 auto;
       }
-      #content{
+      .rectangle{
         margin-top: 40px;
         font-size: 22px;
-        width: 260px;
-        height: 300px;
+        width:370px;
         text-align: left;
         color: purple;
       }
       input{
         text-align: left;
       }
-      #length,#area{
-        background-color: rgb(235,235,228);
-        border: 1px solid rgb(169,169,169);                    
-      }
-      #spe{
+
+      #rectangle.calc{
           margin-right: 180px;          
       }
       span{
         red;
       }
-      #txt1,#txt2{
-        display: none;
-        margin-right:-30px;
-        color: red;
-        font-size: 16px;
-      }
+
       input:valid+span:after {
         content: '√';
         color: green;
@@ -44,44 +36,31 @@
         content: '×';
         color: red;
       }
-      #f1{
-        text-align: left;
-      }
-      #rectangle-width-validate,
-#rectangle-height-validate {
-  color: red;
-  margin-left: 63px;
-  font-size: 0.8em;
-}
-
 
      </style>
 </head>
 <body>
-
-<div id='content'>
-<form id='f1'>
-  <label for="">宽度:</label>
-  <input id="width" type="number" mim='0' autofocus required step='0.00001'>
-  <span></span>
+<div class="rectangle">
+  <form style="text-align:left;">
+    <label>宽度：</label>
+    <input id="rectangle-width" type="number" min="0" autofocus required step="0.00001">
+    <span></span>
+    <br>
+   
+    <label>高度：</label>
+    <input id="rectangle-height" type="number" min="0" required step="0.00001">
+    <span></span>
+    <br>
+    
+    <input id="rectangle-calc" type="submit" value="计算">
+  </form>
+  <label>周长：</label>
+  <input id="rectangle-perimeter" type="text" disabled>
   <br>
-   <div id="rectangle-width-validate"></div>
-  
-  <label for="">高度:</label>
-  <input id="height" type="number" min='0' autofocus required step='0.00001'>
-  <span></span>
-  <br>
-  <div id="rectangle-width-validate"></div>
-  <input type='button' id="spe" value="计算">
-  <br>
-  <label for="">周长:</label>
-  <input id="length" type="textbox" disabled="disabled">
-  <br>
-  <label for="">面积:</label>
-  <input id="area" type="textbox" disabled="disabled">
-</form>
-
+  <label>面积：</label>
+  <input id="rectangle-area" type="text" disabled>
 </div>
 </body>
 <script src="js/4.js"></script>
+
 </html>
