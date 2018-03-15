@@ -26,7 +26,7 @@
     length.value=2*(val1*(10**max)+val2*(10**max))/(10**max);
     area.value=(val1*(10**max))*(val2*(10**max))/(10**(2*max))
   }
-  width.onblur=function(){
+  width.onkeyup=function(){
     if(width.value==''){
       height.setAttribute('disabled',true);
       txt1.style.display = "block";
