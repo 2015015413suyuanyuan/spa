@@ -5,7 +5,7 @@
   var spe=document.getElementById('spe');
   var length = document.getElementById('length');
   var area=document.getElementById('area');
-  var reg=/^\d+(\.\d+)?$/;
+  var reg=/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/;
   
   window.onload=function(){
     var width=document.getElementById('width');

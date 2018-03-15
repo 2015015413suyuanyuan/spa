@@ -5,28 +5,15 @@
   var spe=document.getElementById('spe');
   var length = document.getElementById('length');
   var area=document.getElementById('area');
-  var reg=/^\d+(\.\d+)?$/;
+  var reg=/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/;
   
   window.onload=function(){
     var width=document.getElementById('width');
     width.focus();
   }
 
-  spe.onclick=function(){
-    var val1=width.value;
-    var val2=height.value;
-    var widLength;
-    var heiLength
-    var Max1;
-    var Max2;
-    var a,b;
-    a = (val1.split('.').length==2) ? val1.split('.')[1].length : 0;
-    b = (val2.split('.').length==2) ? val2.split('.')[1].length : 0;
-    var max=Math.max(a,b);
-    length.value=2*(val1*(10**max)+val2*(10**max))/(10**max);
-    area.value=(val1*(10**max))*(val2*(10**max))/(10**(2*max))
-  }
-  width.onkeyup=function(){
+
+  function fn1(){
     if(width.value==''){
       height.setAttribute('disabled',true);
       txt1.style.display = "block";
@@ -44,7 +31,7 @@
 
     }
   }
-  height.onblur=function(){
+ function fn2 (){
     if(height.value==''){
       width.setAttribute('disabled',true);
       txt2.style.display = "block";
@@ -59,5 +46,19 @@
       width.removeAttribute('disabled');
       txt2.style.display = "none";
       txt2.innerHTML='';
+      spe.onclick=function(){
+        var val1=width.value;
+        var val2=height.value;
+        var widLength;
+        var heiLength
+        var Max1;
+        var Max2;
+        var a,b;
+        a = (val1.split('.').length==2) ? val1.split('.')[1].length : 0;
+        b = (val2.split('.').length==2) ? val2.split('.')[1].length : 0;
+        var max=Math.max(a,b);
+        length.value=2*(val1*(10**max)+val2*(10**max))/(10**max);
+        area.value=(val1*(10**max))*(val2*(10**max))/(10**(2*max))
+      }
     }    
   }
