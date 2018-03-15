@@ -32,7 +32,7 @@
       txt1.style.display = "block";
       txt1.innerHTML='宽度值不能为空！';
     }
-    else if(!reg.test(width.value)){
+    else if(reg.test(width.value)){
       height.setAttribute('disabled',true);
       txt1.style.display = "block";
       txt1.innerHTML='宽度值必须为数值！';
@@ -50,7 +50,7 @@
       txt2.style.display = "block";
       txt2.innerHTML='高度值不能为空！';
     }
-    else if(!reg.test(height.value)){
+    else if(reg.test(height.value)){
       width.setAttribute('disabled',true);
       txt2.style.display = "block";
       txt2.innerHTML='高度值必须为数值！';
@@ -61,7 +61,7 @@
       txt2.innerHTML='';
     }    
   }
-  var reg1=/[(A-Z)|(a-z)|\-`~!@#$%^&*()=_+\[\]{}|;:'",<>/?\\]/;
+  var reg1=/[abcdf-zABCDF-Z`~!@#$%^&*()=_+\[\]{}|;:'",<>/?\\]/;
   height.onkeypress=function(e){
     if(reg1.test(e.key)){
       e.preventDefault();
