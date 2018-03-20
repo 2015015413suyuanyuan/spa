@@ -195,10 +195,14 @@ UI：in（用户输入） out（信息展示）
 >  ① 封装后的形态  
 >  1.fn  **√** return DOM  
 >  2.构造函数 使用时：new A()  
+
 >  3.{} object  
+
 >  4.DOM对象  
->  ② 接口  
->  1.init : title tlength enabled 格式  
+
+>  2.3方法需要自己实现事件机制  
+>  ② 接口  
+>  1.init : title tlength enabled 格式  
 >  2.事件
 3. 测试
 
