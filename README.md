@@ -1,12 +1,12 @@
 # SPA富应用开发
-## 第一章
+## 第一节
 
 课程流程：
 1.SPA介绍
 2.安装开发环境
 3.做一个简单的APP
 
-### 1.1 SPA富应用开发（spa：single page application）
+### SPA富应用开发（spa：single page application）
 
 spa富应用开发
 
@@ -82,7 +82,7 @@ alias: lrd live reload热加载
 ：lclose  关闭注释
 
 
-# 第二章 H5内置控件
+# 第二节 H5内置控件
 ## 1、界面设计原则  
 ### 相关性（容器内部） 布局
 	
@@ -163,3 +163,5 @@ UI：in（用户输入） out（信息展示）
 >   3、handsontable  
 >   4、百度地图  
 >   5、mathQuill  
+
+### 第五节  自定义组件
