@@ -41,7 +41,7 @@ var timerButton = function(config) {
 
   $btn.click(function() {
     $btn.trigger('timer-button-click');
-    if(cfg.enabled) disableBtn();
+    if(cfg.enable) disableBtn();
   });
 
   return $btn;
