@@ -1,4 +1,8 @@
-syy-timer-button{
+*{
+	margin: 0 auto;
+	text-align: center;
+}
+#syy-timer-button{
 	width: 110px;
 	height: 50px;
 	background-color: pink;
