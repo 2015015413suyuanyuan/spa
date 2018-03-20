@@ -198,7 +198,7 @@ UI：in（用户输入） out（信息展示）
 >  3.{} object  
 >  4.DOM对象  
 >      2.3方法需要自己实现事件机制  
->  ② 接口  
+>  ② 接口  
 >  1.init : title tlength enabled 格式  
 >  2.事件  
 **组件实现**  
