@@ -197,12 +197,11 @@ UI：in（用户输入） out（信息展示）
 >  2.构造函数 使用时：new A()  
 >  3.{} object  
 >  4.DOM对象  
-
->  2.3方法需要自己实现事件机制  
+>      2.3方法需要自己实现事件机制  
 >  ② 接口  
->  1.init : title tlength enabled 格式  
+>  1.init : title tlength enabled 格式  
 >  2.事件  
-**组件实现**   
+**组件实现**  
 1.DOM绘制:  
 >  1.浏览器原生API  
 >  2.jquery : $html()  $append($)
