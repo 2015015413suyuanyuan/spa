@@ -3,7 +3,7 @@ var lookPwd=function(config){
 	var container = config.container;
 	
 	var $lab =$("<label for='name'>密码 :  </label>");
-	var $pwd = $("<input type='password' style='text-align:left;' id='pwd'>");
+	var $pwd = $("<input type='password' style='text-align:left;' class='pwd'>");
 	var $br=$('<br>');
 	var $img = $("<img src='1.jpg'  class='img1'>");
 	$(container).append($lab,$pwd,$img,$br);
@@ -15,7 +15,6 @@ var lookPwd=function(config){
 		});
 	$img.mouseout(function(){
 		 $img.attr('src','1.jpg');
-		    $pwd.attr('type','password');
-		    
+		 $pwd.attr('type','password');		    
 		});
 }
