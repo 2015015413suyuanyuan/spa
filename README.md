@@ -230,3 +230,59 @@ require.js:
 >> 2. js组件之间有依赖 例如：先引入jQuery 再引用我们的JS 解决重复依赖关系  
 >> 3. 前端js优化：把js文件打包压缩了。 按需加载 延迟加载 （需要的时候加载，不需要的时候不加载）
 
+## 第七节  组件化（下）
+
+好处：分而治之  
+那难以解决的大规模的问题，变成容易解决的小规模的问题。分解之后可以实现并行开发  
+
+案例是一个企业的MIS管理后台
+
+学籍管理 成绩管理 图书管理 设备管理
+
+
+MIS系统： management information system  各种什么什么管理系统    
+数据库表的CURD:create delete update retrieve  
+抽象来说：database table 的  CURD操作 增删改查
+
+前后端分离：ajax技术  局部刷新
+
+前后端分离：如何实现现有用PHP写的页面  
+提供思路：  
+> a.js 是前台程序还是后台程序  
+> 部署在服务器上  
+> 前台是在浏览器环境 后台在服务器环境  
+> 前台通过URL 下载到browser浏览器上 运行环境是浏览器，script标签上就有浏览器地址    
+> 后台不会下载到浏览器上，放在服务器的运行环境解析的  
+> 如果在前台浏览器，代码压缩，所以需要;  
+>  
+>> 前台代码为什么要进行压缩：减少js文件的加载，加快速度  
+
+> 后台代码不会进行压缩
+
+前端产品：  
+.html .css .js
+
+后端产品：  
+restfulAPI
+http:get post put delete  url路由  通过这些对数据进行增删改查操作  
+
+前端主流的模式：  
+SPA:single page application
+web page
+一个 *.html 多个 .css .js  
+单页 登陆页面就是一个组件
+
+login  
+index APP主页  
+
+body  
+- 	div#admin-app  
+- 	login-com  
+- 	header  
+- 	menu  
+- 	stage 面板 对话框  
+- 	footer  
+    
+model:  menus config table1 table2 
+view:  header menu footer stage:panel dialog
+controller:  menu
