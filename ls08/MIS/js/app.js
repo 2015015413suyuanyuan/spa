@@ -1,16 +1,14 @@
+$(function() {
+  window.onhashchange = function() {
+    if(location.hash === '#/logout') $login.show({'container': '#admin-app'});
+    $stage.load(location.hash);
+  };
 
-$(function(){
-	if(app.isLogin) {
-		$header.show();
-		$menu.show();
-		$footer.show();
-		$stage.show();
-	} else {
-		$login.show();
-	}
-	
-	window.onhashchange=function(){
-		if(location.hash  === '#/login') $login.show();
-		console.log(location.hash);
-	}
-})
+  $header.show({
+    'title': app.config.headerTitle,
+    'logo': app.config.headerLogo
+  });
+  $menu.show();
+  $footer.show();
+  $stage.show();
+});

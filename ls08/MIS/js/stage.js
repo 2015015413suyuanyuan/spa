@@ -1,21 +1,41 @@
-var $stage = (function(){
-	function show(){
-		$(app.config.appContainer).append('<div class="admin-app-stage"></div>')
-	}
-/*
-根据路由信息加载响应的panel
-*/
-	function load(router){
-		var panel = parsePanel(router);
-	}
-/*
-将路由信息解析成panel 名称
+var $stage = function() {
+  function show() {
+    $(app.config.appContainer).append($('<div class="admin-app-stage"></div>'));
+  }
+  
+  /**
+   * 将路由信息解析成 panel 对象的名称
+   *
+   * @param string router 路由字符串
+   * @returns string panel 对象的名称
+   */
+  function getPanel(router) {
+    var panel = router.replace(/-(.)/g, function(letter){
+      return letter.toUpperCase();
+    }).replace(/#\//,'$')
+      .replace(/-/g,'');
 
-@paramrouter路由字符串
-@returns string panel 名字
+    return panel + 'Panel';
+  }
+
+  /**
+   * 根据路由信息加载相应的面板
+   *
+   * @param router
+   * @returns {undefined}
+   */
+  function load(router) {
+    var panel = getPanel(router);
+     //console.log(panel);
+    eval(panel + ".show({'container': '.admin-app-stage'});");
+  }
+
+  return {show: show, load: load};
+}();
+
+/* test case
+
+$stage.load('#/store-list');
+$stage.load('#/store-list-abc');
+
 */
-	function parsePanel(router){
-		return '';
-	}
-	return {show:show,load:load};
-})()
