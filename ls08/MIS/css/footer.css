@@ -1,0 +1,14 @@
+
+.admin-app-footer{
+	position: absolute;
+	left: 200px;
+	bottom: 0;
+	height: 36px;
+	right: 0;
+	background:#eee;
+	font:14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+	line-height: 26px;
+}
+.admin-app-footer p{
+
+}

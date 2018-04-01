@@ -1,5 +1,5 @@
 var $login=(function(){
-	var html=`
+	var $loginDOM=$(`
 	<div class="content">
 		<h2>集团后台登录</h2>
 		<form>
@@ -17,9 +17,24 @@ var $login=(function(){
 		</form>
 	</div>
 
-	`;
-	function show(config){
-		$(config.container).html(html);
+	`);
+
+	function validate(){
+		return true;
+
 	}
+var $form = $loginDOM.find('form');
+	function show(config){
+		$(app.config.appContainer).html('');
+		$(app.config.appContainer).html($loginDOM);
+	}
+	$form.submit(function(e){
+			e.preventDefault();
+			
+			 console.log(window.location.origin);
+			 console.log('dfds');
+			app.isLogin = true;
+			window.location.href = window.location.origin;
+	});
 	return {show:show};
 })();
