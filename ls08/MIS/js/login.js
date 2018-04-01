@@ -1,40 +1,29 @@
-var $login=(function(){
-	var $loginDOM=$(`
-	<div class="content">
-		<h2>集团后台登录</h2>
-		<form>
-			<div class="form-item">
-				<label for="name">用户名</label><input type="text">
-			</div>
-			<div class="form-item">
-				<label for="password">密码</label><input type="password">
-			</div>
-			<div class="form-item">
-				<label for="ma">验证码</label><input type="text" class="spe">
-			</div>
-			
-			<input type="submit" value="登录" class="form-submit">
-		</form>
-	</div>
+var $login = function() {
+  var $loginDOM = $(''
+      + '<div class="admin-app-login">'
+        + '<h1>管理后台登录</h1>'
+        + '<form>'
+          + '<label>用户名</label>'
+          + '<input type="text" autofocus><br>'
+          + '<label>密　码</label>'
+          + '<input type="password"><br>'
+          + '<label>验证码</label>'
+          + '<input type="text"><br>'
+          + '<input type="submit" value="登 录">'
+        + '</form>'
+      + '</div>');
 
-	`);
+  var $form = $loginDOM.find('form');
 
-	function validate(){
-		return true;
+  function show() {
+    $(app.config.appContainer).html('');
+    $(app.config.appContainer).append($loginDOM);
+  }
 
-	}
-var $form = $loginDOM.find('form');
-	function show(config){
-		$(app.config.appContainer).html('');
-		$(app.config.appContainer).html($loginDOM);
-	}
-	$form.submit(function(e){
-			e.preventDefault();
-			
-			 console.log(window.location.origin);
-			 console.log('dfds');
-			app.isLogin = true;
-			window.location.href = window.location.origin;
-	});
-	return {show:show};
-})();
+  $form.submit(function(e) {
+    e.preventDefault();
+    window.location.href = window.location.origin;
+  });
+  
+  return {show: show};
+}();

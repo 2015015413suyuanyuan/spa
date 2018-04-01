@@ -1,69 +1,38 @@
+.admin-app-login {
+  position: relative;
+  top: 200px;
+  width: 420px;
+  border: solid 1px #c2c2c2;
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
 
-.form-item input{
-	text-align: left;
-    height: 38px;
-    line-height: 38px;
-    border: 1px solid #e6e6e6;
-    background-color: #fff;
-    border-radius: 2px;
-    width: 210px;
- 	float: left;
- 	outline: none;
+.admin-app-login h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
-.login-content{
 
+.admin-app-login label {
+  height: 20px;
+  padding: 9px 15px 9px 0;
 }
-.form-item{
-	width: 420px;
-	float: left;
-	margin-bottom: 15px;
-}
-.content{
-	width: 420px;
-    border: solid 1px #c2c2c2;
-    margin: auto;
-    margin-top: 200px;
-    background: white;
-    text-align: center;
-    padding-bottom: 30px;
-}
-.content:after{
-	content: "";
-	display: block;
-	clear: both;
-}
-.form-item label{
-	float: left;
-    display: block;
-    padding: 9px;
-    width: 80px;
-    font-weight: 400;
-    text-align: right;
-    width: 120px;
-}
- .content h2{
- 	color: black;
-    font-size: 1.6rem;
-    margin: 7% 7%;
- }
- input.form-submit{
-	width: 100px;
- 	display: inline-block;
-    height: 38px;
-    line-height: 38px;
-    padding: 0 18px;
-    background-color: #009688;
-    color: #fff;
-    white-space: nowrap;
-    text-align: center;
-    font-size: 14px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    opacity: .9;
 
- }
- input.spe{
- 	width: 80px;
- 	height: 38px;
- }
+.admin-app-login input {
+  height: 36px;
+  width: 210px;
+  margin: 5px 0;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #d2d2d2;
+}
+
+.admin-app-login input[type="submit"] {
+  background: #009688;
+  color: white;
+  width: 100px;
+  height: 38px;
+  padding: 0;
+}
