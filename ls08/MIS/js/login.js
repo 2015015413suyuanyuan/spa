@@ -22,7 +22,7 @@ var $login = function() {
 
   $form.submit(function(e) {
     e.preventDefault();
-    window.location.href = window.location.origin;
+    window.location.href = window.location.origin+"/index.html";
   });
   
   return {show: show};
