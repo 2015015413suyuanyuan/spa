@@ -26,7 +26,8 @@ var $stage = function() {
    */
   function load(router) {
     var panel = getPanel(router);
-     //console.log(panel);
+     console.log(panel);
+  
     eval(panel + ".show({'container': '.admin-app-stage'});");
   }
 
